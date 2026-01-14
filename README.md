@@ -258,10 +258,5 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 For questions, issues, or custom bot development:
 
-- **GitHub**: [github.com/keidev123](https://github.com/keidev123)
 - **Telegram**: [@Kei4650](https://t.me/Kei4650)
 - **X (Twitter)**: [@kei_4650](https://x.com/kei_4650)
-
-## Disclaimer
-
-This software is for educational purposes only. Trading involves risk of loss. The developers are not responsible for any financial losses incurred while using this bot.
