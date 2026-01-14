@@ -1,0 +1,45 @@
+{
+  "name": "polymarket-arbitrage-bot-ts",
+  "version": "2.0.0",
+  "description": "TypeScript trading bot for Polymarket with gasless transactions and real-time WebSocket orderbook streaming",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch cli/flash-crash-runner.ts",
+    "start": "node dist/cli/flash-crash-runner.js",
+    "flash-crash": "tsx cli/flash-crash-runner.ts",
+    "orderbook-viewer": "tsx cli/orderbook-viewer.ts",
+    "lint": "eslint . --ext .ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "polymarket",
+    "trading",
+    "arbitrage",
+    "typescript",
+    "websocket",
+    "defi"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.9.0",
+    "axios": "^1.6.2",
+    "ws": "^1.1.5",
+    "yaml": "^2.3.4",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/ws": "^1.1.7",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
